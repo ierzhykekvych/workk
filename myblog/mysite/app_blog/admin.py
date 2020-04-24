@@ -24,8 +24,7 @@ class ArticleAdmin(admin.ModelAdmin):
     multiupload_list = False
     prepopulated_fields = {'slug': ('title',)}
     raw_id_fields = ('category',)
-    fieldsets = (
-        ('', {'fields': ('pub_date', 'title', 'description','main_page'),}),((u'Додатково'), {'classes': ('grp-collapse grp-closed',),'fields': ('slug',),}),)
+    fieldsets = (('', {'fields': ('pub_date', 'title', 'description','main_page'),}),((u'Додатково'), {'classes': ('grp-collapse grp-closed',),'fields': ('slug',),}),)
     def delete_file(self, pk, request):
         '''Delete an image.'''
 
